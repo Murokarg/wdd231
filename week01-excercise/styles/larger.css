@@ -1,4 +1,4 @@
-@media only screen and (min-widht: 38rem){
+@media only screen and (min-width: 38rem){
 
     header, main, nav, footer {
         max-width: 900px;
@@ -9,10 +9,17 @@
         grid-template-columns: 24px auto;
     }
 
-
-.hamburger {
-    display: none;
-
-}
-
+    .hamburger {
+        display: none;
+    }
+    .navigation {
+        display: block;
+        border-bottom: solid 1px #eee;
+    }
+    .navigation ul {
+        display: flex;
+    }
+    .navigation a {
+        border: none;
+    }
 }
