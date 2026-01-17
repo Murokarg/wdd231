@@ -1,0 +1,89 @@
+/* Estilos solo para pantallas grandes (769px en adelante) */
+
+@media screen and (min-width: 769px) {
+
+    /* === HEADER === */
+    header {
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 50px auto 50px;
+    }
+
+    header span {
+        align-self: center;
+    }
+
+    .nav-toggle {
+        display: none;
+        /* we hide the hamburger button */
+    }
+
+    /* === NAVIGATION === */
+    nav {
+        display: block;
+        /* always visible */
+        background: none;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+    }
+
+    nav li {
+        margin-bottom: 0;
+    }
+
+    nav a {
+        padding: 0.5rem 0.8rem;
+        border-radius: 4px;
+    }
+
+    /* === MAIN === */
+    main {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+    }
+
+    /* === STUDENT PHOTO === */
+    section img {
+        /*float: right;*/
+        max-width: 300px;
+        margin: 0 0 1rem 1.5rem;
+    }
+
+    /* === COURSES === */
+    .courses-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+    }
+
+    /* === FOOTER === */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1.2rem 2rem;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}
