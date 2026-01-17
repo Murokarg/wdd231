@@ -1,8 +1,7 @@
-/* Estilos solo para pantallas grandes (769px en adelante) */
 
 @media screen and (min-width: 769px) {
 
-    /* === HEADER === */
+    /* ======================== HEADER ========================= */
     header {
         padding: 1rem 2rem;
         display: grid;
@@ -18,7 +17,7 @@
         /* we hide the hamburger button */
     }
 
-    /* === NAVIGATION === */
+    /* =================== NAVIGATION ========================= */
     nav {
         display: block;
         /* always visible */
@@ -54,21 +53,20 @@
         font-size: 2.2rem;
     }
 
-    /* === STUDENT PHOTO === */
+    /* ========================== STUDENT PHOTO ==================== */
     section img {
-        /*float: right;*/
         max-width: 300px;
         margin: 0 0 1rem 1.5rem;
     }
 
-    /* === COURSES === */
+    /* ============================ COURSES ======================== */
     .courses-list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0.8rem;
     }
 
-    /* === FOOTER === */
+    /* ========================= FOOTER ========================= */
     footer {
         display: flex;
         justify-content: space-between;

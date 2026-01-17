@@ -55,8 +55,7 @@ header span {
 /* ============================= NAVIGATION ================================== */
 
 .navigation {
-    display: none;
-    /* Oculto por defecto en móvil */
+    display: none; /* Hide by default in movil version*/
     background-color: #34495e;
     padding: 1rem;
 }
@@ -64,10 +63,7 @@ header span {
 .navigation.show {
     display: block;
 }
-/* 
-nav.active {
-    display: block;
-} */
+
 
 .navigation ul {
     list-style: none;
@@ -185,7 +181,7 @@ footer {
     width: 32px;
     height: 32px;
     filter: invert(1);
-    /* Hace que los íconos blancos se vean bien si son negros */
+
 }
 
 footer p {
@@ -193,7 +189,7 @@ footer p {
     margin: 0.3rem 0;
 }
 
-/* ================== ACCESIBILIDAD Y MEJORES PRÁCTICAS ===================== */
+/* ================== ACCESSABILITY ===================== */
 :focus-visible {
     outline: 2px solid #3498db;
     outline-offset: 2px;
