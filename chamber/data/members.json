@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Queretaro Tech Solutions",
+    "address": "Av. Tecnológico 150, Zona Industrial, Querétaro, QRO, Mexico",
+    "phone": "+52 442 123 4567",
+    "website": "https://queretarotech.com",
+    "image": "tech-solutions.jpg",
+    "membershipLevel": 3,
+    "category": "Technology",
+    "email": "info@queretarotech.com",
+    "description": "Leading provider of software development and IT consulting services in Querétaro."
+  },
+  {
+    "name": "Café de la Plaza",
+    "address": "Plaza de Armas 45, Centro Histórico, Querétaro, QRO, Mexico",
+    "phone": "+52 442 987 6543",
+    "website": "https://cafedelaplaza.com",
+    "image": "cafe-plaza.jpg",
+    "membershipLevel": 2,
+    "category": "Food & Beverage",
+    "email": "contact@cafeplazaarmas.com",
+    "description": "Cozy café offering artisanal coffee and homemade pastries in the heart of downtown."
+  },
+  {
+    "name": "AutoCare Querétaro",
+    "address": "Calle Automotriz 300, Parque Industrial, Querétaro, QRO, Mexico",
+    "phone": "+52 442 555 1234",
+    "website": "https://autocareqro.com",
+    "image": "autocare.png",
+    "membershipLevel": 1,
+    "category": "Automotive",
+    "email": "info@ilovemycarqro.com",
+    "description": "Trusted auto repair shop specializing in maintenance, diagnostics, and bodywork."
+  },
+  {
+    "name": "Belleza Spa & Wellness",
+    "address": "Paseo de las Flores 200, Colonia Jardines, Querétaro, QRO, Mexico",
+    "phone": "+52 442 789 0123",
+    "website": "https://bellezaspawellness.com",
+    "image": "belleza-spa.jpg",
+    "membershipLevel": 3,
+    "category": "Beauty & Wellness",
+    "email": "contact@spabelleza.com",
+    "description": "Luxury spa offering massages, facials, and wellness treatments for relaxation and rejuvenation."
+  },
+  {
+    "name": "GreenGrow Nursery",
+    "address": "Camino Agrícola 55, Ejido San Pedro, Querétaro, QRO, Mexico",
+    "phone": "+52 442 321 6789",
+    "website": "https://greengrownursery.com",
+    "image": "greengrow.jpg",
+    "membershipLevel": 2,
+    "category": "Gardening & Landscaping",
+    "email": "info@greengrownursery.com",
+    "description": "Local nursery providing plants, gardening tools, and landscaping design services."
+  },
+  {
+    "name": "Querétaro Fitness Club",
+    "address": "Avenida Deportiva 80, Colonia Deportiva, Querétaro, QRO, Mexico",
+    "phone": "+52 442 456 7890",
+    "website": "https://qrofitnessclub.com",
+    "image": "fitness-club.jpg",
+    "membershipLevel": 1,
+    "category": "Health & Fitness",
+    "email": "contact@fitnessclub.com",
+    "description": "Modern gym with personal training, group classes, and state-of-the-art equipment."
+  },
+  {
+    "name": "BookNook Querétaro",
+    "address": "Librería Central 10, Centro Cultural, Querétaro, QRO, Mexico",
+    "phone": "+52 442 678 9012",
+    "website": "https://booknookqro.com",
+    "image": "booknook.jpg",
+    "membershipLevel": 2,
+    "category": "Education & Books",
+    "email": "info@booknowqro.com",
+    "description": "Independent bookstore featuring local authors, cozy reading nooks, and literary events."
+  },
+  {
+    "name": "PetPals Veterinary Clinic",
+    "address": "Calle Mascotas 75, Colonia Animales, Querétaro, QRO, Mexico",
+    "phone": "+52 442 012 3456",
+    "website": "https://petpalsvets.com",
+    "image": "petpals.jpg",
+    "membershipLevel": 3,
+    "category": "Veterinary Services",
+    "email": "contact@petpalsclinic.com",
+    "description": "Compassionate veterinary care for dogs, cats, and small animals with modern facilities."
+  }
+]

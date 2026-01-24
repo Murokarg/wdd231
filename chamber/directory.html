@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Queretaro Chamber of Commerce">
+    <meta property="og:description" content="This is a website for a fictitious Chamber of Commerce site for the class of WDD 231 of the BYU Idaho">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="icon" href="images/favicon.ico" type="favicon">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/date.js" defer ></script>
+
+    <title>Querétaro Business Directory | Chamber of Commerce</title>
+</head>
+<body>
+      <header>
+    <div class="logo">
+      <img src="images/heart-fill.svg" alt="Querétaro Chamber of Commerce Logo" width="40" height="40" />
+    </div>
+    <span>Querétaro Chamber of Commerce</span>
+    <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <nav>
+      <ul>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+    <h1>Business Directory</h1>
+
+    <!-- Button to change the view -->
+    <div class="view-toggle">
+      <button id="gridView" class="active">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+
+    <!-- Container where the cards will show -->
+    <div id="members-container" class="members-grid"></div>
+  </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                <img src="images/instagram.svg" alt="Instagram profile" loading="lazy" />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+                <img src="images/linkedin.svg" alt="LinkedIn profile" loading="lazy" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                <img src="images/facebook.svg" alt="Facebook profile" loading="lazy" />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+                <img src="images/twitter-x.svg" alt="Twitter profile" loading="lazy" />
+            </a>
+        </div>
+        <p>&copy; <span id="currentYear"></span> - Edwin René Rodríguez Ortiz</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
