@@ -145,4 +145,78 @@
   .social-icons {
     justify-content: flex-start;
   }
+
+  /* ======================== Hero Section ======================== */
+  .hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ======================== Section Layout ======================== */
+  .events-section,
+  .spotlights-section {
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .weather-section {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+  }
+
+  /* ======================== Weather Card ======================== */
+  .weather-main {
+    padding: 2rem;
+  }
+
+  .weather-temp .temp {
+    font-size: 4rem;
+  }
+
+  .weather-details {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .weather-details .detail {
+    padding: 1rem;
+  }
+
+  /* ======================== Grid Adjustments ======================== */
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  /* ======================== Event & Spotlight Cards ======================== */
+  .event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .spotlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .spotlight-meta {
+    padding: 0.8rem;
+  }
 }

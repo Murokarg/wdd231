@@ -1,0 +1,77 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 200 200" 
+  aria-label="Querétaro Chamber of Commerce Logo"
+  class="logo-chamber"
+>
+  <!-- Círculo exterior -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#1A2B5F" stroke-width="2.5"/>
+  
+  <!-- Corona de hojas de vid (estilizada) -->
+  <g id="vid-leaves" fill="#4A6B3F">
+    <!-- Hoja 1 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(0 100 100)"/>
+    <!-- Hoja 2 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(30 100 100)"/>
+    <!-- Hoja 3 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(60 100 100)"/>
+    <!-- Hoja 4 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(90 100 100)"/>
+    <!-- Hoja 5 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(120 100 100)"/>
+    <!-- Hoja 6 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(150 100 100)"/>
+    <!-- Hoja 7 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(180 100 100)"/>
+    <!-- Hoja 8 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(210 100 100)"/>
+    <!-- Hoja 9 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(240 100 100)"/>
+    <!-- Hoja 10 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(270 100 100)"/>
+    <!-- Hoja 11 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(300 100 100)"/>
+    <!-- Hoja 12 -->
+    <path d="M100 15 Q108 25 105 35 Q110 40 105 48 Q108 58 100 62" transform="rotate(330 100 100)"/>
+  </g>
+  
+  <!-- Arcos del Acueducto-Puente (3 arcos estilizados) -->
+  <g id="acueducto" stroke="#1A2B5F" stroke-width="3" fill="none">
+    <path d="M45 135 Q65 110 85 135" opacity="0.9"/>
+    <path d="M85 135 Q100 115 115 135" opacity="1"/>
+    <path d="M115 135 Q135 110 155 135" opacity="0.9"/>
+  </g>
+  
+  <!-- Estrella de 8 puntas (símbolo de Querétaro) -->
+  <path 
+    d="M100 70 L104 82 L117 85 L108 94 L110 107 L100 101 L90 107 L92 94 L83 85 L96 82 Z
+       M100 70 L108 65 L112 53 L118 63 L131 62 L125 73 L130 85 L118 83 L112 94 L108 83 Z"
+    fill="#C6A961" 
+    stroke="#1A2B5F" 
+    stroke-width="1.5"
+  />
+  
+  <!-- Texto: QUERÉTARO (superior) -->
+  <text 
+    x="100" 
+    y="42" 
+    text-anchor="middle" 
+    font-family="Montserrat, Lato, Arial, sans-serif" 
+    font-size="14" 
+    font-weight="700" 
+    fill="#1A2B5F"
+    letter-spacing="1.5"
+  >QUERÉTARO</text>
+  
+  <!-- Texto: CHAMBER OF COMMERCE (inferior) -->
+  <text 
+    x="100" 
+    y="172" 
+    text-anchor="middle" 
+    font-family="Montserrat, Lato, Arial, sans-serif" 
+    font-size="9" 
+    font-weight="400" 
+    fill="#1A2B5F"
+    letter-spacing="2"
+  >CHAMBER OF COMMERCE</text>
+</svg>
