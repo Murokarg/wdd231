@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Thank You | Querétaro Chamber of Commerce">
+  <meta property="og:description" content="Thank you for joining the Querétaro Chamber of Commerce">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <link rel="icon" href="images/favicon.ico" type="favicon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <title>Thank You | Querétaro Chamber of Commerce</title>
+
+</head>
+
+<body>
+  <!-- ---------------------------------- HEADER --------------------------------  -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-chamber.svg" alt="Querétaro Chamber of Commerce" width="40" height="40">
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ------------------------------ MAIN --------------------------------------- -->
+  <main>
+    <!-- Hero Section -->
+    <section class="thankyou-hero">
+      <div class="hero-content">
+        <h1>Thank You for Joining!</h1>
+        <p>We appreciate you taking the time to become a member of the Querétaro Chamber of Commerce.</p>
+      </div>
+    </section>
+
+    <!-- Thank You Content -->
+    <section class="thankyou-section">
+      <div class="thankyou-content">
+        <h2>Membership Confirmation</h2>
+
+        <div class="confirmation-icon">✓</div>
+
+        <p>Thank you for submitting your membership application. Your information has been received and will be reviewed
+          by our team. You should receive a confirmation email within 2 business days.</p>
+
+        <div class="form-info">
+          <div class="info-item">
+            <span class="info-label">Full Name</span>
+            <span class="info-value" id="fullName"></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Email Address</span>
+            <span class="info-value" id="email"></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Phone Number</span>
+            <span class="info-value" id="phone"></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Business Name</span>
+            <span class="info-value" id="businessName"></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Membership Level</span>
+            <span class="info-value" id="membership"></span>
+          </div>
+
+          <div class="info-item">
+            <span class="info-label">Date Submitted</span>
+            <span class="info-value" id="timestamp"></span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="index.html" class="cta-button">Return to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <img src="images/instagram.svg" alt="Instagram profile" loading="lazy" />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <img src="images/linkedin.svg" alt="LinkedIn profile" loading="lazy" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="images/facebook.svg" alt="Facebook profile" loading="lazy" />
+      </a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+        <img src="images/twitter-x.svg" alt="Twitter profile" loading="lazy" />
+      </a>
+    </div>
+    <p>&copy; <span id="currentYear"></span> - Edwin René Rodríguez Ortiz</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+
+</html>

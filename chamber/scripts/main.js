@@ -95,3 +95,104 @@ document.addEventListener('DOMContentLoaded', () => {
   setupViewToggle();
   setupMobileMenu();
 });
+
+// ================================ JOIN PAGE ============================
+
+// Set timestamp on page load
+document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('timestamp').value = new Date().toISOString();
+
+      // Form validation enhancement
+      const joinForm = document.getElementById('join-form');
+      
+      joinForm.addEventListener('submit', function(e) {
+        // Check if all required fields are filled
+        const requiredFields = joinForm.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.style.borderColor = '#e74c3c';
+          } else {
+            field.style.borderColor = '#ddd';
+          }
+        });
+        
+        if (!isValid) {
+          e.preventDefault();
+          alert('Please fill in all required fields marked with *');
+        }
+      });
+      
+      // Add input focus/blur effects
+      const inputs = joinForm.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.style.borderColor = '#3498db';
+        });
+        
+        input.addEventListener('blur', function() {
+          this.style.borderColor = this.value.trim() ? '#27ae60' : '#ddd';
+        });
+      });
+    });
+
+// ================================ THANKYOU PAGE ============================
+    document.addEventListener('DOMContentLoaded', function () {
+      // Parse query parameters from URL
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Get values from parameters
+      const firstName = urlParams.get('firstname') || 'Not provided';
+      const lastName = urlParams.get('lastname') || 'Not provided';
+      const email = urlParams.get('email') || 'Not provided';
+      const phone = urlParams.get('phone') || 'Not provided';
+      const businessName = urlParams.get('businessname') || 'Not provided';
+      const membership = urlParams.get('membership') || 'Not provided';
+      const timestamp = urlParams.get('timestamp') || 'Not provided';
+
+      // Format the timestamp to a more readable format
+      let formattedTimestamp = 'Not provided';
+      if (timestamp !== 'Not provided') {
+        const date = new Date(timestamp);
+        formattedTimestamp = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+      }
+
+      // Update the DOM with the form data
+      document.getElementById('fullName').textContent = `${firstName} ${lastName}`;
+      document.getElementById('email').textContent = email;
+      document.getElementById('phone').textContent = phone;
+      document.getElementById('businessName').textContent = businessName;
+      document.getElementById('membership').textContent = getMembershipLevelText(membership);
+      document.getElementById('timestamp').textContent = formattedTimestamp;
+
+      // Set the current year and last modified date
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+      document.getElementById("lastModified").textContent = document.lastModified;
+    });
+
+    // Helper function to convert membership code to readable text
+    function getMembershipLevelText(membershipCode) {
+      switch (membershipCode) {
+        case 'np':
+          return 'NP Membership (Non-Profit, No Fee)';
+        case 'bronze':
+          return 'Bronze Membership';
+        case 'silver':
+          return 'Silver Membership';
+        case 'gold':
+          return 'Gold Membership';
+        default:
+          return 'Not provided';
+      }
+    }
+
+// ================================  ============================
+

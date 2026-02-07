@@ -219,4 +219,65 @@
   .spotlight-meta {
     padding: 0.8rem;
   }
+
+  /* ====================== JOIN page ====================================== */
+  .join-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .join-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .join-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .join-container {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .form-section {
+    flex: 2;
+    padding: 2rem;
+  }
+
+  .membership-levels {
+    flex: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    width: auto;
+  }
+
+  /* ================================== THANK YOU PAGE =============================== */
+  .thankyou-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thankyou-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .thankyou-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
 }

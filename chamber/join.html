@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Join Querétaro Chamber of Commerce">
+  <meta property="og:description" content="Become a member of the Querétaro Chamber of Commerce and grow your business">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <link rel="icon" href="images/favicon.ico" type="favicon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <title>Join | Querétaro Chamber of Commerce</title>
+  </head>
+
+<body>
+<!-- ---------------------------------- HEADER ----------------------------------> 
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo-chamber.svg" alt="Querétaro Chamber of Commerce" width="40" height="40">
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="join.html" class="active" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- ------------------------------ MAIN --------------------------------------- -->
+  <main>
+    <!-- Hero Section -->
+    <section class="join-hero">
+      <div class="hero-content">
+        <h1>Join the Querétaro Chamber of Commerce</h1>
+        <p>Connect with local businesses, grow your network, and boost your visibility in the Querétaro business community</p>
+      </div>
+    </section>
+
+    <!-- Join Form & Membership Levels -->
+    <section class="join-section">
+      <div class="join-container">
+        <!-- Application Form -->
+        <div class="form-section">
+          <h2>Membership Application</h2>
+          <form method="get" action="thankyou.html" id="join-form">
+            <div class="form-group">
+              <label for="firstname">First Name *</label>
+              <input type="text" id="firstname" name="firstname" required 
+                autocomplete="given-name" placeholder="John">
+            </div>
+            
+            <div class="form-group">
+              <label for="lastname">Last Name *</label>
+              <input type="text" id="lastname" name="lastname" required 
+                autocomplete="family-name" placeholder="Doe">
+            </div>
+            
+            <div class="form-group">
+              <label for="orgtitle">Organizational Title *</label>
+              <input type="text" id="orgtitle" name="orgtitle" required 
+                autocomplete="organization-title" 
+                pattern="[a-zA-Z\- ]{7,}" 
+                placeholder="Marketing Manager"
+                title="Please enter a title with at least 7 characters">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required 
+                autocomplete="email" 
+                placeholder="john.doe@business.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Mobile Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required 
+                autocomplete="tel" 
+                placeholder="+52 442 123 4567">
+            </div>
+            
+            <div class="form-group">
+              <label for="businessname">Business/Organization Name *</label>
+              <input type="text" id="businessname" name="businessname" required 
+                autocomplete="organization" 
+                placeholder="ABC Company">
+            </div>
+            
+            <div class="form-group">
+              <label for="membership">Membership Level *</label>
+              <select id="membership" name="membership" required>
+                <option value="" disabled selected>-- Select Membership Level --</option>
+                <option value="np">NP Membership (Non-Profit, No Fee)</option>
+                <option value="bronze">Bronze Membership</option>
+                <option value="silver">Silver Membership</option>
+                <option value="gold">Gold Membership</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Business Description</label>
+              <textarea id="description" name="description" rows="4" 
+                placeholder="Tell us about your business or organization..."></textarea>
+            </div>
+            
+            <input type="hidden" name="timestamp" id="timestamp" value="">
+            
+            <button type="submit" class="btn-submit">Submit Application</button>
+          </form>
+        </div>
+
+        <!-- Membership Levels -->
+        <div class="membership-levels">
+          <h2 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 0.6rem; position: relative;">Membership Levels</h2>
+          
+          <div class="membership-card gold">
+            <h3>🥇 Gold Membership</h3>
+            <span class="price">$750 USD / year</span>
+            <ul>
+              <li>Premium directory listing with logo</li>
+              <li>6 free event tickets</li>
+              <li>Featured in all communications</li>
+              <li>Exclusive leadership forums</li>
+              <li>30% event discount</li>
+              <li>Speaking opportunities</li>
+            </ul>
+          </div>
+          
+          <div class="membership-card silver">
+            <h3>🥈 Silver Membership</h3>
+            <span class="price">$350 USD / year</span>
+            <ul>
+              <li>Enhanced directory listing</li>
+              <li>4 free event tickets</li>
+              <li>Featured in newsletter</li>
+              <li>Priority workshop access</li>
+              <li>20% event discount</li>
+              <li>Host workshops</li>
+            </ul>
+          </div>
+          
+          <div class="membership-card bronze">
+            <h3>🥉 Bronze Membership</h3>
+            <span class="price">$150 USD / year</span>
+            <ul>
+              <li>Standard directory listing</li>
+              <li>2 free event tickets</li>
+              <li>Newsletter advertising</li>
+              <li>Member resources access</li>
+              <li>10% event discount</li>
+              <li>Networking events</li>
+            </ul>
+          </div>
+          
+          <div class="membership-card np">
+            <h3>❤️ NP Membership</h3>
+            <span class="price free">FREE for Non-Profits</span>
+            <ul>
+              <li>Basic directory listing</li>
+              <li>Access to networking</li>
+              <li>Free workshops</li>
+              <li>Community initiatives</li>
+              <li>Basic promotion</li>
+              <li>For non-profits only</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+        <img src="images/instagram.svg" alt="Instagram profile" loading="lazy" />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <img src="images/linkedin.svg" alt="LinkedIn profile" loading="lazy" />
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+        <img src="images/facebook.svg" alt="Facebook profile" loading="lazy" />
+      </a>
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener">
+        <img src="images/twitter-x.svg" alt="Twitter profile" loading="lazy" />
+      </a>
+    </div>
+    <p>&copy; <span id="currentYear"></span> - Edwin René Rodríguez Ortiz</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+  </body>
+
+</html>
