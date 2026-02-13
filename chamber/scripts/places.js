@@ -1,0 +1,1 @@
+import { places } from "../data/places.mjs";
