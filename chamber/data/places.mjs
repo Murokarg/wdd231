@@ -13,7 +13,7 @@ export const places = [
     address: "Av. Aqueducto, Centro Sur, Querétaro, QRO, Mexico",
     description:
       "An 18th-century engineering marvel stretching over 1.3 km with 74 arches, symbolizing the city and offering panoramic views from its base.",
-    image: "aqueduct.webp",
+    image: "acueduct.webp",
   },
   {
     id: 3,

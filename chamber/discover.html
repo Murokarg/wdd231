@@ -12,13 +12,14 @@
   <link rel="icon" href="images/favicon.ico" type="favicon">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/larger.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <script src="scripts/main.js" defer></script>
+  <!--<script src="scripts/main.js" defer></script> -->
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/places.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
 
-  <title>Querétaro Business About | Chamber of Commerce</title>
+  <title>Querétaro Business Discover | Chamber of Commerce</title>
 </head>
 
 <body>
@@ -43,13 +44,17 @@
   </header>
 
   <!--------------------------------------------- MAIN ------------------------------------------>
+  <main>
+    <!-- Visit message area -->
+    <section class="visit-message" aria-live="polite" role="status">
+      <!-- Will be filled by JavaScript -->
+    </section>
 
-
-
-
-
-
-
+    <!-- Cards grid container -->
+    <section class="cards-grid" aria-label="Places of interest in Querétaro">
+      <!-- Cards will be generated dynamically by scripts/discover.js -->
+    </section>
+  </main>
 
   <!--------------------------------------------- FOOTER ------------------------------------------>
   <footer>

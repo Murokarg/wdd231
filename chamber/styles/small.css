@@ -828,3 +828,124 @@ footer {
       color: #27ae60;
     }
 
+/* ==================================== DISCOVER PAGE ================================ */ 
+
+/* small.css - Mobile-first styles (max-width: 640px) */
+
+  main {
+    padding: 1rem;
+  }
+
+  .visit-message {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+
+  /* Cards Grid: 1 column */
+  .cards-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8";
+  }
+
+  /* Assign each card to its area */
+  .card:nth-of-type(1) {
+    grid-area: card1;
+  }
+
+  .card:nth-of-type(2) {
+    grid-area: card2;
+  }
+
+  .card:nth-of-type(3) {
+    grid-area: card3;
+  }
+
+  .card:nth-of-type(4) {
+    grid-area: card4;
+  }
+
+  .card:nth-of-type(5) {
+    grid-area: card5;
+  }
+
+  .card:nth-of-type(6) {
+    grid-area: card6;
+  }
+
+  .card:nth-of-type(7) {
+    grid-area: card7;
+  }
+
+  .card:nth-of-type(8) {
+    grid-area: card8;
+  }
+
+  /* Card base styles (shared across breakpoints) */
+  .card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  }
+
+  .card figure {
+    margin: 0 0 0.75rem 0;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .card figcaption {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #2c3e50;
+  }
+
+  .card address {
+    font-style: normal;
+    color: #555;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .card button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: 100%;
+  }
+
+  /* No hover effects on mobile — JS won’t add .hover-effect anyway */

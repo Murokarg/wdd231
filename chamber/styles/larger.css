@@ -280,4 +280,132 @@
   }
 
 
+  /* ================================= DISCOVER CARDS ================================= *-
+  /* larger.css - Desktop styles (min-width: 1025px) */
+  .visit-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+
+  /* Cards Grid: 3 columns (last row has 2 cards + empty space) */
+  .cards-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card5 card6"
+      "card7 card8 .";
+  }
+
+  /* Assign each card to its area */
+  .card:nth-of-type(1) {
+    grid-area: card1;
+  }
+
+  .card:nth-of-type(2) {
+    grid-area: card2;
+  }
+
+  .card:nth-of-type(3) {
+    grid-area: card3;
+  }
+
+  .card:nth-of-type(4) {
+    grid-area: card4;
+  }
+
+  .card:nth-of-type(5) {
+    grid-area: card5;
+  }
+
+  .card:nth-of-type(6) {
+    grid-area: card6;
+  }
+
+  .card:nth-of-type(7) {
+    grid-area: card7;
+  }
+
+  .card:nth-of-type(8) {
+    grid-area: card8;
+  }
+
+  /* Enhanced card styling for desktop */
+  .card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .card figure {
+    margin: 0 0 1rem 0;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+
+  .card figcaption {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 1.15rem;
+    color: #2c3e50;
+  }
+
+  .card address {
+    font-style: normal;
+    color: #555;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    margin: 0.5rem 0 1.25rem 0;
+  }
+
+  .card button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+
+  .card button:hover {
+    background-color: #003d82;
+  }
+
+  /* Hover effect on images (JS adds .hover-effect only on hover-capable devices) */
+  .card img.hover-effect {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .card img.hover-effect:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
 }
