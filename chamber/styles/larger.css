@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   header {
     padding: 1rem 2rem;
   }
@@ -281,6 +281,7 @@
 
 
   /* ================================= DISCOVER CARDS ================================= *-
+
   /* larger.css - Desktop styles (min-width: 1025px) */
   .visit-message {
     text-align: center;
@@ -290,7 +291,7 @@
     font-weight: 500;
   }
 
-  /* Cards Grid: 3 columns (last row has 2 cards + empty space) */
+  /* Cards Grid: 3 columns */
   .cards-grid {
     display: grid;
     gap: 2rem;
@@ -334,7 +335,6 @@
     grid-area: card8;
   }
 
-  /* Enhanced card styling for desktop */
   .card {
     background: #ffffff;
     border: 1px solid #e0e0e0;
@@ -398,7 +398,7 @@
     background-color: #003d82;
   }
 
-  /* Hover effect on images (JS adds .hover-effect only on hover-capable devices) */
+  /* Hover effect on images */
   .card img.hover-effect {
     transition: transform 0.3s ease, filter 0.3s ease;
   }
