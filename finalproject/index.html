@@ -1,11 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Queretaro Chamber of Commerce">
+  <meta property="og:description" content="Final project for the class of WDD 231 of the BYU Idaho">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <link rel="icon" href="images/favicon.ico" type="favicon">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <script src="scripts/main.js" defer></script>
+  <title>NutriSync | Personalized Meal Prep Plans</title>
 </head>
+
 <body>
-    
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">NutriSync</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="meal-plan.html">Your Plan</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- Hero Section (Texto + Imagen) -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Personalized Meal Prep for Your Health Goals</h1>
+          <p>Enter your details to get a customized weekly meal plan with nutritional data tailored to your age, weight,
+            gender, and objectives.</p>
+
+          <!-- Formulario de usuario (ajustado al proyecto) -->
+          <form id="user-form" class="user-input-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="100" required>
+              </div>
+              <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" min="30" max="200" required>
+              </div>
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="gender" value="male" checked> Male</label>
+                  <label><input type="radio" name="gender" value="female"> Female</label>
+                  <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="goal">Goal</label>
+                <select id="goal" name="goal" required>
+                  <option value="" disabled selected>Select a goal</option>
+                  <option value="weight-loss">Weight Loss</option>
+                  <option value="muscle-gain">Muscle Gain</option>
+                  <option value="diabetes-control">Diabetes Control</option>
+                  <option value="general-health">General Health</option>
+                </select>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="submit" class="cta-button">Create Your Plan</button>
+              <button type="button" class="secondary-button">Learn More</button>
+            </div>
+          </form>
+        </div>
+        <div class="hero-image">
+          <img src="placeholder.jpg" alt="Sample meal prep plan">
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial (Carrousel) -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="testimonial-container">
+          <p>Lorem ipsum dolor sit amet et delectus accomodare his consul copiosae legendos at vix ad putent delectus
+            delicata usu. Vix dissentiet eos cu eum an brute copiosae hendrerit.</p>
+          <div class="testimonial-nav">
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>NutriSync</h3>
+        <p>Address:<br>123 Main Street, City<br>State Province, Country</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+      <div class="footer-columns">
+        <div class="column">
+          <h4>Column one</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="meal-plan.html">Your Plan</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Column two</h4>
+          <ul>
+            <li><a href="#">Weight Loss Tips</a></li>
+            <li><a href="#">Muscle Gain Recipes</a></li>
+            <li><a href="#">Diabetes-Friendly Meals</a></li>
+            <li><a href="#">Nutrition Blog</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h4>Column three</h4>
+          <ul>
+            <li><a href="#">API Documentation</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NutriSync. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+
 </body>
+
 </html>
