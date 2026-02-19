@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Your Spoonacular API Key (REPLACE THIS WITH YOUR OWN KEY!)
 // Get your free key here: https://spoonacular.com/food-api/console
-const SPOONACULAR_API_KEY = 'TU_API_KEY_AQUÍ';
+const SPOONACULAR_API_KEY = 'efd22470bdc249e89eb0b66f1e1636a0 ';
 const SPOONACULAR_BASE_URL = 'https://api.spoonacular.com';
 
 // Function to calculate caloric needs (Mifflin-St Jeor formula)

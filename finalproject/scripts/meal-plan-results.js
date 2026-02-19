@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtener datos del plan desde localStorage
+  // Get data of the plan from localStorage
   const mealPlanData = JSON.parse(localStorage.getItem("mealPlanData"));
 
   if (!mealPlanData) {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const { recipes, targetCalories, goal } = mealPlanData;
 
-  // Mostrar resumen
+  // Show results summary
   const goalNames = {
     "weight-loss": "Weight Loss",
     "muscle-gain": "Muscle Gain",
@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-  // Mostrar recetas
+  // Show each recipe in the plan
   const recipesList = document.getElementById("recipes-list");
 
   recipes.forEach((recipe, index) => {
     const recipeCard = document.createElement("div");
     recipeCard.className = "recipe-card";
 
-    // Extraer información nutricional
+    // Extract calories and protein from the nutrition data
     let calories = "N/A";
     let protein = "N/A";
 
