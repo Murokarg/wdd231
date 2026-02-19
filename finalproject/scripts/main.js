@@ -195,7 +195,7 @@ async function getMealPlanFromAPI(age, weight, gender, goal) {
 
 // Function to display the meal plan
 function displayMealPlan(mealPlanData) {
-    // Redirect to a results page or show in modal
+    // Redirect to a results page (meal-plan-results.html) and pass the meal plan data
     // For now, we save in localStorage and redirect
     localStorage.setItem('mealPlanData', JSON.stringify(mealPlanData));
     window.location.href = 'meal-plan-results.html';
@@ -341,5 +341,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-console.log('NutriSync JavaScript loaded successfully!');
