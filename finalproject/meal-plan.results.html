@@ -4,18 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Queretaro Chamber of Commerce">
+  <meta property="og:title" content="NutriSync | Personalized Meal Prep Plans">
   <meta property="og:description" content="Final project for the class of WDD 231 of the BYU Idaho">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
   <link rel="icon" href="images/favicon.ico" type="favicon">
+  <title>NutriSync | Your Meal Plan Results</title>
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
-
-  <script src="scripts/main.js" defer></script>
-  <script src="scripts/meal-plan-results.js" defer></script>
-  <title>NutriSync | Personalized Meal Prep Plans</title>
+  <link rel="stylesheet" href="styles/meal-plan.css">
 </head>
 
 <body>
@@ -34,57 +30,27 @@
     </nav>
   </header>
 
-  <!-- Contenido Principal: Formulario Vertical -->
+  <!-- Contenido Principal -->
   <main>
-    <section class="plan-section">
+    <section class="results-section">
       <div class="container">
-        <div class="plan-container">
-          <h1>Create Your Personalized Meal Plan</h1>
-          <p>Enter your details below to generate a customized weekly meal prep plan.</p>
+        <div class="results-container">
+          <h1>Your Personalized Meal Plan</h1>
+          <div id="plan-summary" class="plan-summary"></div>
 
-          <form id="plan-form" class="vertical-form">
-            <div class="form-group">
-              <label for="age">Age</label>
-              <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age" required>
-            </div>
+          <div id="recipes-container" class="recipes-container">
+            <h2>This Week's Recipes</h2>
+            <div id="recipes-list" class="recipes-list"></div>
+          </div>
 
-            <div class="form-group">
-              <label for="weight">Weight (kg)</label>
-              <input type="number" id="weight" name="weight" min="30" max="200" placeholder="Enter your weight"
-                required>
-            </div>
-
-            <div class="form-group">
-              <label>Gender</label>
-              <div class="radio-group">
-                <label><input type="radio" name="gender" value="male" checked> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
-                <label><input type="radio" name="gender" value="other"> Other</label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="goal">Goal</label>
-              <select id="goal" name="goal" required>
-                <option value="" disabled selected>Select your health goal</option>
-                <option value="weight-loss">Weight Loss</option>
-                <option value="muscle-gain">Muscle Gain</option>
-                <option value="diabetes-control">Diabetes Control</option>
-                <option value="general-health">General Health</option>
-              </select>
-            </div>
-
-            <button type="submit" class="plan-button">Personalized Plan</button>
-          </form>
+          <div class="action-buttons">
+            <button onclick="window.print()" class="print-button">Print Plan</button>
+            <button onclick="location.href='meal-plan.html'" class="new-plan-button">Create New Plan</button>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-
-
-
-
 
   <!-- Footer -->
   <footer>
@@ -137,9 +103,12 @@
     </div>
   </footer>
 
+  <!-- JavaScript para mostrar resultados -->
+  <script>
+   
+  </script>
 
-
-
+  <style>
+    
+  </style>
 </body>
-
-</html>

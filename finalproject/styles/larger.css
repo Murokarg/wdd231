@@ -1,0 +1,662 @@
+@media screen and (min-width: 1025px) {
+:root {
+    --nav-color: #0288D1;
+    --button-color: #E65100;
+    --text-color: #333333;
+    --light-gray: #f5f5f5;
+    --dark-bg: #333333;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #FFFFFF;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ------------------------------
+    2. NAVBAR - COMÚN PARA TODAS LAS PÁGINAS
+    ------------------------------ */
+  header {
+    background-color: var(--nav-color);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* ------------------------------
+    3. INDEX.HTML - HERO SECTION
+    ------------------------------ */
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5rem 0;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .hero-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    background-color: white;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .cta-button,
+  .secondary-button {
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    max-width: 250px;
+  }
+
+  .cta-button {
+    background-color: var(--button-color);
+    color: white;
+    width: 100%;
+  }
+
+  .secondary-button {
+    background-color: transparent;
+    color: var(--button-color);
+    border: 2px solid var(--button-color);
+    width: 100%;
+  }
+
+  .cta-button:hover {
+    background-color: #d34a00;
+    transform: translateY(-2px);
+  }
+
+  .secondary-button:hover {
+    background-color: #fff5f0;
+  }
+
+  .hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ------------------------------
+    4. INDEX.HTML - TESTIMONIAL SECTION
+    ------------------------------ */
+  .testimonial {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+  }
+
+  .testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .testimonial-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: var(--text-color);
+  }
+
+  .testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .prev-btn,
+  .next-btn {
+    background-color: var(--nav-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+  }
+
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: #0277bd;
+    transform: scale(1.1);
+  }
+
+  /* ------------------------------
+    5. INDEX.HTML - CONTACT SECTION
+    ------------------------------ */
+  .contact-section {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  .contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form .form-group label {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    resize: vertical;
+    background-color: white;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+
+  .contact-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 4px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .contact-button:hover {
+    background-color: #d34a00;
+    transform: translateY(-2px);
+  }
+
+  /* ------------------------------
+    6. ABOUT.HTML - HERO SECTION
+    ------------------------------ */
+  .about-hero {
+    padding: 4rem 0;
+    text-align: left;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .about-hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    color: var(--text-color);
+  }
+
+  /* ------------------------------
+    7. ABOUT.HTML - MISSION SECTION
+    ------------------------------ */
+  .mission {
+    padding: 3.5rem 0;
+  }
+
+  .mission h2 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  .mission p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 800px;
+    color: var(--text-color);
+  }
+
+  /* ------------------------------
+    8. ABOUT.HTML - HOW IT WORKS SECTION
+    ------------------------------ */
+  .how-it-works {
+    padding: 4rem 0;
+  }
+
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .step {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+
+  .step p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+  }
+
+  /* ------------------------------
+    9. ABOUT.HTML - DATA & PRIVACY SECTION
+    ------------------------------ */
+  .data-privacy {
+    padding: 3.5rem 0;
+  }
+
+  .data-privacy h2 {
+    font-size: 2rem;
+    margin-bottom: 1.8rem;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  .data-privacy p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 800px;
+    color: var(--text-color);
+  }
+
+  .data-privacy a {
+    color: var(--nav-color);
+    text-decoration: underline;
+  }
+
+  /* ------------------------------
+    10. MEAL-PLAN.HTML - PLAN SECTION
+    ------------------------------ */
+  .plan-section {
+    padding: 4rem 0;
+  }
+
+  .plan-container {
+    text-align: center;
+  }
+
+  .plan-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+
+  .plan-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+  }
+
+  .vertical-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .vertical-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vertical-form .form-group label {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .vertical-form input,
+  .vertical-form select {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    background-color: white;
+  }
+
+  .vertical-form .radio-group {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .plan-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 1.1rem;
+    border-radius: 4px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .plan-button:hover {
+    background-color: #d34a00;
+    transform: translateY(-2px);
+  }
+
+  /* ------------------------------
+    11. FOOTER - COMÚN PARA TODAS LAS PÁGINAS
+    ------------------------------ */
+  footer {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2.5rem;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-logo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: white;
+  }
+
+  .footer-logo p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ccc;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+  }
+
+  .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--nav-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    transition: all 0.3s;
+  }
+
+  .social-links a:hover {
+    background-color: #0277bd;
+    transform: translateY(-3px);
+  }
+
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .column {
+    text-align: left;
+  }
+
+  .column h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: white;
+  }
+
+  .column ul {
+    list-style: none;
+  }
+
+  .column ul li {
+    margin-bottom: 0.8rem;
+  }
+
+  .column ul a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+
+  .column ul a:hover {
+    color: white;
+    padding-left: 5px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+  }
+
+  .footer-bottom ul li {
+    margin: 0;
+  }
+
+  .footer-bottom ul a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+
+  .footer-bottom ul a:hover {
+    color: white;
+  }
+
+  /* ------------------------------
+    12. UTILIDADES Y ESTILOS ADICIONALES
+    ------------------------------ */
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}

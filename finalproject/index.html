@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Queretaro Chamber of Commerce">
+  <meta property="og:title" content="NutriSync | Personalized Meal Prep Plans">
   <meta property="og:description" content="Final project for the class of WDD 231 of the BYU Idaho">
   <meta property="og:image" content="">
   <meta property="og:url" content="">
   <link rel="icon" href="images/favicon.ico" type="favicon">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/larger.css">
 
   <script src="scripts/main.js" defer></script>
@@ -99,7 +98,35 @@
         </div>
       </div>
     </section>
+
+<!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Have Questions? Contact Us</h2>
+            <p>We'd love to hear from you! Send us your questions, feedback, or suggestions.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" placeholder="your.email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Write your questions or comments here..." required></textarea>
+                </div>
+
+                <button type="submit" class="contact-button">Send Message</button>
+            </form>
+        </div>
+    </section>
   </main>
+
   <!-- Footer -->
   <footer>
     <div class="footer-content">
