@@ -173,7 +173,7 @@ async function getMealPlanFromAPI(age, weight, gender, goal) {
         params.append('minProtein', minProtein);
         
         // Make API call
-        const response = await fetch(`${SPOONACULAR_BASE_URL}/recipes/complexSearch?${params}`);
+        const response = await fetch(`${SPOONACULAR_BASE_URL}/recipes/complexSearch?query=${params}&apiKey=${SPOONACULAR_API_KEY}`);
         
         if (!response.ok) {
             throw new Error(`API Error: ${response.status}`);
