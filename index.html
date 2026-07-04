@@ -12,8 +12,8 @@
     <meta property="og:url" content="" >
     <meta property="og:image" content="" >
     <title>Edwin • Web Developer Student</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <link rel="stylesheet" href="styles/small.css"> 
     <link rel="stylesheet" href="styles/larger.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
     <script src="scripts/date.js" defer></script>
@@ -40,23 +40,25 @@
         </ul>
     </nav>
 
-    <main>
-        <h1>Home</h1>
+    <main class="main-grid">
+        <section class="section-header">
+            <h1>Home</h1>
+        </section>
 
-        <section>
+        <section class="section-about">
             <h2>About Me</h2>
             <p>I’m a web development student from Mexico with a passion for clean, semantic, and accessible code. I
                 enjoy learning new technologies and building websites from the ground up using HTML, CSS, and
                 vanilla JavaScript.</p>
         </section>
 
-        <section>
+        <section class="section-photo">
             <h2>Student Photo</h2>
             <img src="images/profile.jpg" alt="Edwin smiling"
                 loading="lazy"/>
         </section>
 
-        <section>
+        <section class="section-courses">
             <h2>Web Certificate Courses</h2>
             <div class="course-buttons">
                 <button type="button" data-filter="all">All</button>
