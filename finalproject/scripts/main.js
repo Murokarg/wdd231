@@ -74,8 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 2. SPOONACULAR API INTEGRATION
 // ------------------------------
 
-// Your Spoonacular API Key (REPLACE THIS WITH YOUR OWN KEY!)
-// Get your free key here: https://spoonacular.com/food-api/console
+// Add spoonacular API key and base URL (replace with your actual API key in production)
 const SPOONACULAR_API_KEY = 'efd22470bdc249e89eb0b66f1e1636a0 ';
 const SPOONACULAR_BASE_URL = 'https://api.spoonacular.com';
 
