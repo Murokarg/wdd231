@@ -1,0 +1,46 @@
+
+/* Main container using CSS Grid */
+#cards {
+    display: grid;
+    /*Grid line: Creates as many columns as will fit on the screen.
+    each column will be at least 300px, but will grow (1fr) to fill
+    any extra space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem; /* Space between the cards */
+    padding: 1rem;
+}
+
+/* The individual Cards (stays mostly the same)*/
+section {
+    background-color: #e6e6fa;
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 1rem;
+    /* We can remove the fixed width now, Grid handles it*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style the Prophet's Name */
+section h2 {
+    color: #1a1a1a; /* Dark gray for the name */
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Style the Prophet's Description */
+section p {
+    color: #333;
+    font-size: 1rem;
+    margin: 0.5rem 0; /* Adds a little space between the description and the image */
+}
+
+/* Style the Prophet's Image */
+section img {
+    width: 100%; /* Makes the image stretch to fit the card */
+    max-width: 200px; /* Prevents it from getting too huge on large screens */
+    height: auto; /* Keeps the image from looking squished or stretched */
+    border-radius: 5px; /* Slightly rounds the corners of the image */
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a nice shadow */
+}

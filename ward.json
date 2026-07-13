@@ -1,0 +1,29 @@
+{
+    "family_name": "Jones",
+    "date_of_arrival": "2024-06-01",
+    "number_of_members": 4,
+    "visited_by_bishopric": true,
+    "members": [
+        {
+            "first_name": "John",
+            "gender": "Male",
+            "birthdate": "1989-05-15"
+        },
+        {
+            "first_name": "Jane",
+            "gender": "Female",
+            "birthdate": "1990-08-22"
+        },
+        
+        {
+            "first_name": "Emily",
+            "gender": "Female",
+            "birthdate": "2014-03-10"
+        },
+        {
+            "first_name": "Michael",
+            "gender": "Male",
+            "birthdate": "2016-11-05"
+        }
+    ]
+}
