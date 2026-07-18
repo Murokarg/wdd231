@@ -96,9 +96,9 @@ nav a[aria-current="page"] {
 }
 
 /* ================================== MAIN ================================ */
-/* main {
+main {
     padding: 1.5rem;
-} */
+} 
 
 main h1 {
     font-size: 1.8rem;
