@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Business Networking Mixer",
+      "date": "Feb 15, 2026",
+      "time": "6:00 PM - 9:00 PM",
+      "location": "Querétaro Convention Center",
+      "description": "Connect with local business leaders and entrepreneurs. Light refreshments provided.",
+      "category": "Networking"
+    },
+    {
+      "title": "Export Workshop: Going Global",
+      "date": "Mar 5, 2026",
+      "time": "9:00 AM - 12:00 PM",
+      "location": "Chamber Office - Conference Room A",
+      "description": "Learn strategies for international market expansion and export compliance.",
+      "category": "Education"
+    },
+    {
+      "title": "Annual Gala Dinner",
+      "date": "Apr 20, 2026",
+      "time": "7:00 PM - 11:00 PM",
+      "location": "Hotel Grand Querétaro",
+      "description": "Celebrate excellence in local business. Black tie optional. RSVP required.",
+      "category": "Special Event"
+    }
+  ]
