@@ -94,13 +94,17 @@ main h1 {
 }
 
 /* ------------------------ cards in mobile ----------------*/
-.members-grid .member-card {
+
+.member-card, .spotlight-card, .event-card, .membership-card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.members-grid .member-card {
   padding: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .members-grid .member-card img {
@@ -175,6 +179,16 @@ footer {
 }
 
 /* ======================== Hero Section ======================== */
+.hero, .join-hero, .thankyou-hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+/*
 .hero {
   background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
               url('../images/hero-bg.jpg') center/cover no-repeat;
@@ -183,6 +197,7 @@ footer {
   text-align: center;
   margin-bottom: 2rem;
 }
+*/
 
 .hero-content h1 {
   font-size: 1.8rem;
@@ -483,15 +498,16 @@ footer {
 }
 
 /* ==================== Join page specific styles ================ */
-    .join-hero {
-      background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-                  url('images/hero-bg.jpg') center/cover no-repeat;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
+/*
+.join-hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+        url('images/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  }
+*/
     .join-hero h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -740,15 +756,16 @@ footer {
 
 /* =============================== THANK YOU PAGE ========================== /*
     /* Thank you page specific styles */
-    .thankyou-hero {
-      background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)),
-        url('images/hero-bg.jpg') center/cover no-repeat;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
+/*
+  .thankyou-hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)),
+      url('images/hero-bg.jpg') center/cover no-repeat;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+*/
     .thankyou-hero h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
