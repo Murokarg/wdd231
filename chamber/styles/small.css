@@ -291,7 +291,7 @@ footer {
 
 .weather-header p {
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: #00727b;
   margin: 0;
 }
 
@@ -304,7 +304,7 @@ footer {
   padding: 1rem;
   background: linear-gradient(135deg, #3498db, #2980b9);
   border-radius: 8px;
-  color: white;
+  color: #2c3e50;
 }
 
 .weather-icon img {
@@ -347,7 +347,7 @@ footer {
 .weather-details .label {
   display: block;
   font-size: 0.85rem;
-  color: #7f8c8d;
+  color: #000000;
   margin-bottom: 0.3rem;
 }
 
@@ -462,7 +462,7 @@ footer {
 
 .spotlight-meta .category {
   font-size: 0.85rem;
-  color: #7f8c8d;
+  color: #0056b3;
   font-weight: bold;
 }
 
