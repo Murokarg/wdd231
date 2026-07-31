@@ -89,13 +89,13 @@ main h1 {
 }
 
 .view-toggle button.active {
-  background-color: #3498db;
+  background-color: #2471a3;
   color: white;
 }
 
 /* ------------------------ cards in mobile ----------------*/
 
-.member-card, .spotlight-card, .event-card, .membership-card {
+.member-card, .spotlight-card, .event-card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -187,18 +187,6 @@ footer {
   margin-bottom: 2rem;
 }
 
-
-/*
-.hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-              url('../images/hero-bg.jpg') center/cover no-repeat;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-*/
-
 .hero-content h1 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -217,20 +205,20 @@ footer {
 
 .cta-button {
   display: inline-block;
-  background-color: #3498db;
+  background-color: #2471a3;
   color: white;
   padding: 0.9rem 1.8rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  border: 2px solid #3498db;
+  border: 2px solid #2471a3;
 }
 
 .cta-button:hover,
 .cta-button:focus {
-  background-color: #2980b9;
-  border-color: #2980b9;
+  background-color: #1a5276;
+  border-color: #1a5276;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-decoration: none;
@@ -249,7 +237,7 @@ footer {
   font-size: 1.6rem;
   margin-bottom: 1.2rem;
   color: #2c3e50;
-  border-bottom: 3px solid #3498db;
+  border-bottom: 3px solid #2471a3;
   padding-bottom: 0.6rem;
   position: relative;
 }
@@ -262,7 +250,7 @@ footer {
   left: 0;
   width: 80px;
   height: 3px;
-  background-color: #e74c3c;
+  background-color: #c0392b;
 }
 
 .weather-section h2::after {
@@ -302,9 +290,9 @@ footer {
   gap: 1.5rem;
   margin: 1.5rem 0;
   padding: 1rem;
-  background: linear-gradient(135deg, #3498db, #2980b9);
+  background: linear-gradient(135deg, #2471a3, #1a5276);
   border-radius: 8px;
-  color: #2c3e50;
+  color: white;
 }
 
 .weather-icon img {
@@ -368,7 +356,7 @@ footer {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
-  background-color: #e74c3c;
+  background-color: #c0392b;
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
@@ -397,15 +385,15 @@ footer {
 .event-link {
   display: inline-block;
   margin-top: 0.8rem;
-  color: #3498db;
-  text-decoration: none;
+  color: #2471a3;
+  text-decoration: underline;
   font-weight: bold;
   font-size: 0.95rem;
   transition: color 0.3s;
 }
 
 .event-link:hover {
-  color: #2980b9;
+  color: #1a5276;
   text-decoration: underline;
 }
 
@@ -440,12 +428,12 @@ footer {
 }
 
 .spotlight-badge .bronze {
-  background-color: #d35400;
+  background-color: #a04000;
   color: white;
 }
 
 .spotlight-badge .member {
-  background-color: #3498db;
+  background-color: #2471a3;
   color: white;
 }
 
@@ -457,7 +445,7 @@ footer {
   padding: 0.6rem;
   background-color: #f8f9fa;
   border-radius: 4px;
-  border-left: 3px solid #3498db;
+  border-left: 3px solid #2471a3;
 }
 
 .spotlight-meta .category {
@@ -468,7 +456,7 @@ footer {
 
 .spotlight-meta .level {
   font-size: 0.85rem;
-  color: #e74c3c;
+  color: #c0392b;
   font-weight: bold;
 }
 
@@ -498,16 +486,6 @@ footer {
 }
 
 /* ==================== Join page specific styles ================ */
-/*
-.join-hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
-        url('images/hero-bg.jpg') center/cover no-repeat;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  }
-*/
     .join-hero h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -541,7 +519,7 @@ footer {
       font-size: 1.6rem;
       margin-bottom: 1.5rem;
       color: #2c3e50;
-      border-bottom: 3px solid #3498db;
+      border-bottom: 3px solid #2471a3;
       padding-bottom: 0.6rem;
     }
 
@@ -552,7 +530,7 @@ footer {
       left: 0;
       width: 80px;
       height: 3px;
-      background-color: #e74c3c;
+      background-color: #c0392b;
     }
 
     .form-group {
@@ -583,8 +561,8 @@ footer {
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: #3498db;
-      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      border-color: #2471a3;
+      box-shadow: 0 0 0 2px rgba(36, 113, 163, 0.2);
     }
 
     .form-group textarea {
@@ -593,7 +571,7 @@ footer {
     }
 
     .btn-submit {
-      background-color: #3498db;
+      background-color: #2471a3;
       color: white;
       padding: 0.9rem 1.8rem;
       border: none;
@@ -608,7 +586,7 @@ footer {
 
     .btn-submit:hover,
     .btn-submit:focus {
-      background-color: #2980b9;
+      background-color: #1a5276;
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -675,7 +653,7 @@ footer {
       left: 0;
       width: 5px;
       height: 100%;
-      background-color: #3498db;
+      background-color: #2471a3;
     }
 
     .membership-card.gold::before {
@@ -687,11 +665,11 @@ footer {
     }
 
     .membership-card.bronze::before {
-      background-color: #d35400;
+      background-color: #a04000;
     }
 
     .membership-card.np::before {
-      background-color: #27ae60;
+      background-color: #1e8449;
     }
 
     .membership-card h3 {
@@ -706,13 +684,13 @@ footer {
     .membership-card .price {
       font-size: 1.1rem;
       font-weight: bold;
-      color: #e74c3c;
+      color: #c0392b;
       margin-bottom: 0.8rem;
       display: block;
     }
 
     .membership-card .price.free {
-      color: #27ae60;
+      color: #1e8449;
     }
 
     .membership-card ul {
@@ -734,7 +712,7 @@ footer {
       content: '✓';
       position: absolute;
       left: 0;
-      color: #3498db;
+      color: #2471a3;
       font-weight: bold;
     }
 
@@ -747,25 +725,14 @@ footer {
     }
 
     .membership-card.bronze ul li::before {
-      color: #d35400;
+      color: #a04000;
     }
 
     .membership-card.np ul li::before {
-      color: #27ae60;
+      color: #1e8449;
     }
 
-/* =============================== THANK YOU PAGE ========================== /*
-    /* Thank you page specific styles */
-/*
-  .thankyou-hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)),
-      url('images/hero-bg.jpg') center/cover no-repeat;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-*/
+/* =============================== THANK YOU PAGE ========================== */
     .thankyou-hero h1 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
@@ -795,7 +762,7 @@ footer {
       font-size: 1.6rem;
       margin-bottom: 1.5rem;
       color: #2c3e50;
-      border-bottom: 3px solid #3498db;
+      border-bottom: 3px solid #2471a3;
       padding-bottom: 0.6rem;
       text-align: center;
     }
@@ -807,7 +774,7 @@ footer {
       left: 0;
       width: 80px;
       height: 3px;
-      background-color: #e74c3c;
+      background-color: #c0392b;
     }
 
     .form-info {
@@ -842,16 +809,12 @@ footer {
     .confirmation-icon {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #27ae60;
+      color: #1e8449;
     }
 
 /* ==================================== DISCOVER PAGE ================================ */ 
 
 /* small.css - Mobile-first styles (max-width: 640px) */
-
-  main {
-    padding: 1rem;
-  }
 
   .visit-message {
     text-align: center;
@@ -965,4 +928,4 @@ footer {
     width: 100%;
   }
 
-  /* No hover effects on mobile — JS won’t add .hover-effect anyway */
+  /* No hover effects on mobile — JS won't add .hover-effect anyway */
