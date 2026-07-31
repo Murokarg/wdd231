@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Join Querétaro Chamber of Commerce">
   <meta property="og:description" content="Become a member of the Querétaro Chamber of Commerce and grow your business">
@@ -14,9 +14,26 @@
   <link rel="stylesheet" href="styles/larger.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <script src="scripts/main.js" defer></script>
-  <script src="scripts/date.js" defer></script>
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a website for a fictitious Chamber of Commerce site for the class of WDD 231 of the BYU Idaho">
+  <meta name="author" content="Edwin René Rodríguez Ortiz">
+  <meta property="og:title" content="Queretaro Chamber of Commerce">
+  <meta property="og:description" content="This is a website for a fictitious Chamber of Commerce site for the class of WDD 231 of the BYU Idaho">
+  <meta property="og:image" content="https://murokarg.github.io/wdd231/chamber/images/placeholder.jpg">
+  <meta property="og:url" content="https://murokarg.github.io/wdd231/chamber/join.html">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/date.js" defer ></script>
   <title>Join | Querétaro Chamber of Commerce</title>
-  </head>
+</head>
 
 <body>
 <!-- ---------------------------------- HEADER ----------------------------------> 
@@ -59,13 +76,13 @@
             <div class="form-group">
               <label for="firstname">First Name *</label>
               <input type="text" id="firstname" name="firstname" required 
-                autocomplete="given-name" placeholder="John">
+                autocomplete="given-name" title="First Name" placeholder="John">
             </div>
             
             <div class="form-group">
               <label for="lastname">Last Name *</label>
               <input type="text" id="lastname" name="lastname" required 
-                autocomplete="family-name" placeholder="Doe">
+                autocomplete="family-name" title="Last Name" placeholder="Doe">
             </div>
             
             <div class="form-group">
@@ -81,21 +98,24 @@
               <label for="email">Email Address *</label>
               <input type="email" id="email" name="email" required 
                 autocomplete="email" 
-                placeholder="john.doe@business.com">
+                placeholder="john.doe@business.com"
+                title="Email">
             </div>
             
             <div class="form-group">
               <label for="phone">Mobile Phone Number *</label>
               <input type="tel" id="phone" name="phone" required 
                 autocomplete="tel" 
-                placeholder="+52 442 123 4567">
+                placeholder="+52 442 123 4567"
+                title="Phone Number">
             </div>
             
             <div class="form-group">
               <label for="businessname">Business/Organization Name *</label>
               <input type="text" id="businessname" name="businessname" required 
                 autocomplete="organization" 
-                placeholder="ABC Company">
+                placeholder="ABC Company"
+                title="Organization">
             </div>
             
             <div class="form-group">
@@ -111,7 +131,7 @@
             
             <div class="form-group">
               <label for="description">Business Description</label>
-              <textarea id="description" name="description" rows="4" 
+              <textarea id="description" name="description" rows="4" title="Description"
                 placeholder="Tell us about your business or organization..."></textarea>
             </div>
             
@@ -123,7 +143,7 @@
 
         <!-- Membership Levels -->
         <div class="membership-levels">
-          <h2 style="font-size: 1.6rem; margin-bottom: 1.5rem; color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 0.6rem; position: relative;">Membership Levels</h2>
+          <h2>Membership Levels</h2> <!-- style="font-size: 1.6rem; margin-bottom: 1.5rem; color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 0.6rem; position: relative;" -->
           
           <div class="membership-card gold">
             <h3>🥇 Gold Membership</h3>
