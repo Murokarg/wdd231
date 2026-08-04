@@ -1,0 +1,136 @@
+:root {
+  --main-color: #3498db;
+  --secondary-color: #e65100;
+  --accent-color: #333333;
+  --accent-color2: #f5f5f5;
+  --font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 32px; /* Adjust this value based on your header height */
+}
+
+/* -- color swatches -- */
+.color-swatch {
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-color {
+  background-color: var(--main-color);
+}
+
+.secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.accent-color {
+  background-color: var(--accent-color);
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 10px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--main-color);
+  padding: 20px;
+  color: var(--accent-color2);
+  font-family: var(--font-family);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: left;
+}
+
+.container h1 {
+  grid-column: 1 / 3;
+}
+
+.nav-list {
+  display: contents;
+  list-style: none;
+}
+
+.nav-list li:nth-child(1) {
+  grid-column: 3;
+}
+.nav-list li:nth-child(2) {
+  grid-column: 4;
+}
+.nav-list li:nth-child(3) {
+  grid-column: 5;
+}
+
+/* -- content styles -- */
+
+main {
+  text-align: justify;
+  content-visibility: auto;
+  max-width: 1200px;
+  padding-left: 50px;
+  font-family: var(--font-family);
+}
+
+h2 {
+  background-color: var(--secondary-color);
+  color: var(--accent-color2);
+  padding: 8px 18px;
+  width: fit-content;
+  border-radius: 4px;
+  border: 3px solid var(--accent-color);
+}
+
+.site-scenarios h3 {
+  background-color: var(--main-color);
+  color: var(--accent-color2);
+  padding: 8px 18px;
+  width: fit-content;
+  border-radius: 4px;
+  border: 3px solid var(--accent-color);
+  margin: 20px 80px 20px 80px;
+}
+
+.site-scenarios p {
+  margin-left: 80px;
+  text-align: justify;
+  margin-right: 80px;
+}
+
+p {
+  margin: 0 10px 20px 10px;
+}
+
+.wireframe-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  border: 3px solid var(--accent-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--accent-color2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent-color);
+  color: var(--accent-color2);
+  font-family: var(--font-family);
+}
