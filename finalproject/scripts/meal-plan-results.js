@@ -29,6 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Show each recipe in the plan
   const recipesList = document.getElementById("recipes-list");
 
+  // If there are no recipes, show a message
+  if (recipes.length === 0) {
+    recipesList.innerHTML = `
+      <p style="text-align: center; font-size: 20px;">
+        No recipes found for the given criteria. Please try different parameters.
+      </p>
+    `;
+    return;
+  }
+
+  // Loop through recipes and create cards
   recipes.forEach((recipe, index) => {
     const recipeCard = document.createElement("div");
     recipeCard.className = "recipe-card";
@@ -38,27 +49,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let protein = "N/A";
 
     if (recipe.nutrition && recipe.nutrition.nutrients) {
-      const cals = recipe.nutrition.nutrients.find(
-        (n) => n.name === "Calories",
-      );
+      const cals = recipe.nutrition.nutrients.find((n) => n.name === "Calories",);
       const prot = recipe.nutrition.nutrients.find((n) => n.name === "Protein");
-
       if (cals) calories = Math.round(cals.amount);
       if (prot) protein = Math.round(prot.amount);
     }
 
     recipeCard.innerHTML = `
-                    <h3>Day ${index + 1}: ${recipe.title}</h3>
-                    <div class="recipe-image">
-                        <img src="${recipe.image}" alt="${recipe.title}">
-                    </div>
-                    <div class="recipe-info">
-                        <p><strong>Calories:</strong> ${calories} kcal</p>
-                        <p><strong>Protein:</strong> ${protein}g</p>
-                        <p><strong>Ready in:</strong> ${recipe.readyInMinutes} minutes</p>
-                    </div>
-                    <a href="${recipe.sourceUrl}" target="_blank" class="recipe-link">View Full Recipe</a>
-                `;
+      <h3>Day ${index + 1}: ${recipe.title}</h3>
+      <div class="recipe-image">
+        <img src="${recipe.image}" alt="${recipe.title}">
+      </div>
+      <div class="recipe-info">
+        <p><strong>Calories:</strong> ${calories} kcal</p>
+        <p><strong>Protein:</strong> ${protein}g</p>
+        <p><strong>Ready in:</strong> ${recipe.readyInMinutes} minutes</p>
+      </div>
+      <a href="${recipe.sourceUrl}" target="_blank" class="recipe-link">View Full Recipe</a>
+    `;
 
     recipesList.appendChild(recipeCard);
   });
