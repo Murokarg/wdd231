@@ -7,6 +7,14 @@
   --text-color: #333333;
   --light-gray: #f5f5f5;
   --dark-bg: #333333;
+  --font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  --nav-hover: #0277bd;
+  --button-hover: #d34a00;
+  --secondary-hover: #fff5f0;
+  --border-color: #ddd;
+  --footer-text: #ccc;
+  --footer-text-muted: #aaa;
+  --footer-border: #444;
 }
 
 
@@ -16,7 +24,7 @@ body {
   color: var(--text-color);
   background-color: #FFFFFF;
   overflow-x: hidden;
-}
+} 
 
 .container {
   width: 100%;
@@ -30,11 +38,19 @@ body {
    ------------------------------ */
 header {
   background-color: var(--nav-color);
-  padding: 1rem 0;
+  padding: 10px 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav {
@@ -52,10 +68,17 @@ nav {
 }
 
 .nav-links {
-  display: flex;
+  display: none;
+  width: 100%;
+  flex-direction: column;
   list-style: none;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-links.active {
+  display: flex;
 }
 
 .nav-links li {
@@ -69,12 +92,13 @@ nav {
   font-size: 0.95rem;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
-  transition: all 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
 }
 
 /* ------------------------------
@@ -101,12 +125,20 @@ nav {
   color: var(--text-color);
 }
 
+form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
   max-width: 450px;
+  background-color: var(--light-gray);
+  padding: 10px;
 }
 
 .form-group {
@@ -124,7 +156,7 @@ nav {
 .form-group input,
 .form-group select {
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
   background-color: white;
@@ -141,6 +173,7 @@ nav {
   align-items: center;
   cursor: pointer;
   font-size: 0.95rem;
+  gap: 10px;
 }
 
 .button-group {
@@ -148,6 +181,9 @@ nav {
   flex-direction: column;
   gap: 0.8rem;
   width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  background-color: var(--light-gray);
 }
 
 .cta-button,
@@ -161,7 +197,7 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
 .cta-button {
@@ -176,16 +212,17 @@ nav {
 }
 
 .cta-button:hover {
-  background-color: #d34a00;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
 .secondary-button:hover {
-  background-color: #fff5f0;
+  background-color: var(--secondary-hover);
 }
 
 .hero-image {
-  padding-top: 2rem;
+  padding-top: 20px;
+  display: flex;
   width: 100%;
 }
 
@@ -234,12 +271,12 @@ nav {
   border-radius: 50%;
   cursor: pointer;
   font-size: 1rem;
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .prev-btn:hover,
 .next-btn:hover {
-  background-color: #0277bd;
+  background-color: var(--nav-hover);
   transform: scale(1.1);
 }
 
@@ -288,7 +325,7 @@ nav {
 .contact-form input,
 .contact-form textarea {
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
   resize: vertical;
@@ -308,14 +345,14 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
 }
 
 .contact-button:hover {
-  background-color: #d34a00;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
@@ -479,7 +516,7 @@ nav {
 .vertical-form input,
 .vertical-form select {
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
   background-color: white;
@@ -500,14 +537,14 @@ nav {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
   width: 100%;
   max-width: 280px;
   margin: 0 auto;
 }
 
 .plan-button:hover {
-  background-color: #d34a00;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
@@ -539,7 +576,7 @@ footer {
 .footer-logo p {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: #ccc;
+  color: var(--footer-text);
 }
 
 .social-links {
@@ -558,11 +595,11 @@ footer {
   text-align: center;
   line-height: 32px;
   color: white;
-  transition: all 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-links a:hover {
-  background-color: #0277bd;
+  background-color: var(--nav-hover);
   transform: translateY(-3px);
 }
 
@@ -591,10 +628,10 @@ footer {
 }
 
 .column ul a {
-  color: #ccc;
+  color: var(--footer-text);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: all 0.3s;
+  transition: color 0.3s, padding-left 0.3s;
 }
 
 .column ul a:hover {
@@ -605,13 +642,13 @@ footer {
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--footer-border);
   margin-top: 1.5rem;
 }
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #aaa;
+  color: var(--footer-text-muted);
   margin-bottom: 0.5rem;
 }
 
@@ -628,10 +665,10 @@ footer {
 }
 
 .footer-bottom ul a {
-  color: #aaa;
+  color: var(--footer-text-muted);
   text-decoration: none;
   font-size: 0.85rem;
-  transition: all 0.3s;
+  transition: color 0.3s;
 }
 
 .footer-bottom ul a:hover {

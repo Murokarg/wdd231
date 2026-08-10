@@ -5,6 +5,13 @@
     --text-color: #333333;
     --light-gray: #f5f5f5;
     --dark-bg: #333333;
+    --nav-hover: #0277bd;
+    --button-hover: #d34a00;
+    --secondary-hover: #fff5f0;
+    --border-color: #ddd;
+    --footer-text: #ccc;
+    --footer-text-muted: #aaa;
+    --footer-border: #444;
   }
 
   * {
@@ -18,6 +25,7 @@
     line-height: 1.6;
     color: var(--text-color);
     background-color: #FFFFFF;
+    overflow-x: hidden;
   }
 
   .container {
@@ -28,19 +36,23 @@
   }
 
   /* ------------------------------
-    2. NAVBAR - COMÚN PARA TODAS LAS PÁGINAS
+    2. NAVBAR - COMMON FOR ALL PAGES
     ------------------------------ */
   header {
     background-color: var(--nav-color);
-    padding: 1.5rem 0;
+    padding: 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
   }
 
+  .nav-toggle {
+    display: none;
+  }
+
   nav {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
   }
@@ -52,10 +64,13 @@
     text-decoration: none;
   }
 
-  .nav-links {
+  .nav-links,
+  .nav-links.active {
     display: flex;
+    flex-direction: row;
     list-style: none;
     gap: 2rem;
+    width: auto;
   }
 
   .nav-links li {
@@ -69,7 +84,7 @@
     font-size: 1.1rem;
     padding: 0.5rem 0.8rem;
     border-radius: 4px;
-    transition: all 0.3s;
+    transition: background-color 0.3s, color 0.3s;
   }
 
   .nav-links a:hover,
@@ -127,7 +142,7 @@
   .form-group input,
   .form-group select {
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1.05rem;
     background-color: white;
@@ -160,7 +175,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
     max-width: 250px;
   }
 
@@ -178,12 +193,12 @@
   }
 
   .cta-button:hover {
-    background-color: #d34a00;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
   }
 
   .secondary-button:hover {
-    background-color: #fff5f0;
+    background-color: var(--secondary-hover);
   }
 
   .hero-image {
@@ -237,12 +252,12 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
   }
 
   .prev-btn:hover,
   .next-btn:hover {
-    background-color: #0277bd;
+    background-color: var(--nav-hover);
     transform: scale(1.1);
   }
 
@@ -291,7 +306,7 @@
   .contact-form input,
   .contact-form textarea {
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1.05rem;
     resize: vertical;
@@ -311,14 +326,14 @@
     font-size: 1.15rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
   }
 
   .contact-button:hover {
-    background-color: #d34a00;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
   }
 
@@ -480,7 +495,7 @@
   .vertical-form input,
   .vertical-form select {
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 1.05rem;
     background-color: white;
@@ -500,24 +515,24 @@
     font-size: 1.15rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
   }
 
   .plan-button:hover {
-    background-color: #d34a00;
+    background-color: var(--button-hover);
     transform: translateY(-2px);
   }
 
   /* ------------------------------
-    11. FOOTER - COMÚN PARA TODAS LAS PÁGINAS
+    11. FOOTER - COMMON FOR ALL PAGES
     ------------------------------ */
   footer {
     background-color: var(--dark-bg);
     color: white;
-    padding: 3rem 0 1.5rem;
+    padding: 3rem 1rem 1.5rem;
   }
 
   .footer-content {
@@ -539,7 +554,7 @@
   .footer-logo p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #ccc;
+    color: var(--footer-text);
   }
 
   .social-links {
@@ -557,11 +572,11 @@
     text-align: center;
     line-height: 40px;
     color: white;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
   }
 
   .social-links a:hover {
-    background-color: #0277bd;
+    background-color: var(--nav-hover);
     transform: translateY(-3px);
   }
 
@@ -590,10 +605,10 @@
   }
 
   .column ul a {
-    color: #ccc;
+    color: var(--footer-text);
     text-decoration: none;
     font-size: 1rem;
-    transition: all 0.3s;
+    transition: color 0.3s, padding-left 0.3s;
   }
 
   .column ul a:hover {
@@ -604,13 +619,13 @@
   .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--footer-border);
     margin-top: 2rem;
   }
 
   .footer-bottom p {
     font-size: 0.95rem;
-    color: #aaa;
+    color: var(--footer-text-muted);
     margin-bottom: 0.8rem;
   }
 
@@ -626,10 +641,10 @@
   }
 
   .footer-bottom ul a {
-    color: #aaa;
+    color: var(--footer-text-muted);
     text-decoration: none;
     font-size: 0.95rem;
-    transition: all 0.3s;
+    transition: color 0.3s;
   }
 
   .footer-bottom ul a:hover {
@@ -637,7 +652,7 @@
   }
 
   /* ------------------------------
-    12. UTILIDADES Y ESTILOS ADICIONALES
+    12. UTILITIES AND ADDITIONAL STYLES
     ------------------------------ */
   section {
     margin-bottom: 3rem;

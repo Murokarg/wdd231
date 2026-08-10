@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // 2. SPOONACULAR API INTEGRATION
 // ------------------------------
 
-// Add spoonacular API key and base URL (replace with your actual API key in production)
+// Spoonacular API key and base URL 
 const SPOONACULAR_API_KEY = "efd22470bdc249e89eb0b66f1e1636a0";
 const SPOONACULAR_BASE_URL = "https://api.spoonacular.com";
 
@@ -124,96 +124,68 @@ function calculateCalories(age, weight, gender, goal) {
   return Math.round(targetCalories);
 }
 
-// Function to get recipes from Spoonacular API
+
 async function getMealPlanFromAPI(age, weight, gender, goal) {
-  try {
-    // Calculate target calories
-    const targetCalories = calculateCalories(age, weight, gender, goal);
+    try {
+        const targetCalories = calculateCalories(age, weight, gender, goal);
 
-    // Determine diet according to goal
-    let dietType = "";
-    let minProtein = 20;
+        const params = new URLSearchParams();
+        params.append('timeFrame', 'week');
+        params.append('targetCalories', targetCalories);
+        params.append('apiKey', SPOONACULAR_API_KEY);
 
-    switch (goal) {
-      case "weight-loss":
-        dietType = "lowCarbs";
-        minProtein = 30;
-        break;
-      case "muscle-gain":
-        dietType = "";
-        minProtein = 40;
-        break;
-      case "diabetes-control":
-        dietType = "lowGlycemic";
-        minProtein = 25;
-        break;
-      case "general-health":
-        dietType = "";
-        minProtein = 20;
-        break;
+        const url = `${SPOONACULAR_BASE_URL}/mealplanner/generate?${params.toString()}`;
+        console.log('🔍 URL from the planner:', url);
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`Error ${response.status}: ${errorText}`);
+        }
+
+        const data = await response.json();
+
+        // We check the response has the expected structure
+        if (!data.week || typeof data.week !== 'object') {
+            throw new Error('The response does not contain a valid weekly plan.');
+        }
+
+        // We extract the recipes with their day and nutrients details
+        const recipes = [];
+        const days = Object.keys(data.week);
+        for (const day of days) {
+            const dayData = data.week[day];
+            if (dayData.meals && dayData.meals.length > 0) {
+                dayData.meals.forEach(meal => {
+                    recipes.push({
+                        ...meal,
+                        day: day,
+                        dayNutrients: dayData.nutrients // Save the nutrients of the day
+                    });
+                });
+            }
+        }
+
+        if (recipes.length === 0) {
+            throw new Error('No meals found in the current plan. Try with different parameters');
+        }
+
+        // We return the meal plan with the days and recipes 
+        return {
+            planData: data, // Saves all the data for future use cases 
+            recipes: recipes,
+            targetCalories: targetCalories,
+            goal: goal,
+            days: days // Days of the week list
+        };
+
+    } catch (error) {
+        console.error('❌ API error:', error);
+        throw error;
     }
-
-    // // Build search parameters
-    // const params = new URLSearchParams({
-    //   apiKey: SPOONACULAR_API_KEY,
-    //   number: 7, // 7 recipes (one per day)
-    //   addRecipeInformation: "true",
-    //   addRecipeNutrition: "true",
-    // });
-
-    const params = new URLSearchParams();
-    params.append('number', 7); // 7 recipes (one per day)
-    params.append('addRecipeInformation', 'true');
-    params.append('addRecipeNutrition', 'true');
-    
-    // Add filters according to goal
-    if (dietType) {
-      params.append("diet", dietType);
-    }
-
-    // Caloric range (±200 calories from target)
-    const minCalories = Math.max(200, targetCalories - 200);
-    const maxCalories = targetCalories + 200;
-
-    params.append('minCalories', minCalories);
-    params.append('maxCalories', maxCalories);
-    params.append('minProtein', minProtein);
-
-    // Make API call
-    // const response = await fetch(
-    //   `${SPOONACULAR_BASE_URL}/recipes/complexSearch?query=${params}&apiKey=${SPOONACULAR_API_KEY}`,
-    // );
-    const url = `${SPOONACULAR_BASE_URL}/recipes/complexSearch?${params.toString()}&apikey=${SPOONACULAR_API_KEY}`;
-    console.log('URL:', url); // Log the URL for debugging
-    const response = await fetch(url);
-
-
-    if (!response.ok) {
-      throw new Error(`API Error: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    // If no recipes found, throw an error
-    if (!data.results || data.results.length === 0) {
-      throw new Error('No recipes found for the given criteria. Please try different parameters.');
-    }
-    
-    return {
-      recipes: data.results,
-      targetCalories: targetCalories,
-      goal: goal,
-    };
-
-  } catch (error) {
-
-    console.error("Error:", error);
-    alert('Error: ' + error.message);
-    submitBtn.textContent = originalText;
-    submitBtn.disabled = false;
-    throw error; // Re-throw the error to be handled by the caller
-  }
 }
+
 
 // Function to display the meal plan
 function displayMealPlan(mealPlanData) {
@@ -265,11 +237,10 @@ if (userForm) {
 
       // Show result
       displayMealPlan(mealPlan);
+
     } catch (error) {
       console.error("Error generating meal plan:", error);
-      alert(
-        "Sorry, there was an error generating your meal plan. Please try again.",
-      );
+      alert(`Error: ${error.message}`);
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     }
@@ -278,7 +249,6 @@ if (userForm) {
 
 // Contact form
 const contactForm = document.getElementById("contact-form");
-
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -347,7 +317,7 @@ if (planForm) {
 }
 
 // ------------------------------
-// 4. ADDITIONAL UTILITIES
+// 4. UTILITIES
 // ------------------------------
 
 // Smooth scroll for navigation links
@@ -367,3 +337,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+function setupHamburger() {
+  const navToggleBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  navToggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
+
+setupHamburger();
