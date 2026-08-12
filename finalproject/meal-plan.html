@@ -4,19 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is the final project for the class WD231 of the BYU Idaho.">
+  <meta name="author" content="Edwin René Rodríguez Ortiz">
   <meta property="og:title" content="NutriSync | Personalized Meal Prep Plans">
   <meta property="og:description" content="Final project for the class of WDD 231 of the BYU Idaho">
-  <meta property="og:image" content="">
-  <meta property="og:url" content="">
-  <link rel="icon" href="images/favicon.ico" type="favicon">
-  
+  <meta property="og:image" content="https://murokarg.github.io/wdd231/chamber/images/placeholder.jpg">
+  <meta property="og:url" content="https://murokarg.github.io/wdd231/finalproject/index.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
   <!-------------------- CSS --------------------------------->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
-
   <!------------------ SCRIPTS ------------------------------->
   <script src="scripts/main.js" defer></script>
+  
   <title>NutriSync | Personalized Meal Prep Plans</title>
 </head>
 
@@ -27,10 +31,11 @@
       <div class="logo">
         <a href="index.html">NutriSync</a>
       </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="meal-plan.html">Your Plan</a></li>
+        <li><a href="meal-plan.html" class="active" aria-current="page">Your Plan</a></li>
         <li><a href="index.html#contact-section">Contact</a></li>
       </ul>
     </nav>
@@ -88,7 +93,7 @@
     <div class="footer-content">
       <div class="footer-logo">
         <h3>NutriSync</h3>
-        <p>Address:<br>123 Main Street, City<br>State Province, Country</p>
+        <p>Address:<br>Jose Ma. Truchuelo 1000 , Corregidora<br>Santiago de Querétaro, México</p>
         <div class="social-links">
           <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
           <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
@@ -97,7 +102,7 @@
       </div>
       <div class="footer-columns">
         <div class="column">
-          <h4>Column one</h4>
+          <h4>Site Map</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -106,7 +111,7 @@
           </ul>
         </div>
         <div class="column">
-          <h4>Column two</h4>
+          <h4>Nutrition Tips</h4>
           <ul>
             <li><a href="#">Weight Loss Tips</a></li>
             <li><a href="#">Muscle Gain Recipes</a></li>
@@ -115,9 +120,9 @@
           </ul>
         </div>
         <div class="column">
-          <h4>Column three</h4>
+          <h4>Legal Information</h4>
           <ul>
-            <li><a href="#">API Documentation</a></li>
+            <li><a rel="noopener" href="https://spoonacular.com/food-api/docs" target="_blank">API Documentation</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">Accessibility</a></li>

@@ -316,11 +316,11 @@ if (planForm) {
   });
 }
 
-// ------------------------------
-// 4. UTILITIES
-// ------------------------------
+// // ------------------------------
+// // 4. UTILITIES
+// // ------------------------------
 
-// Smooth scroll for navigation links
+// // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
