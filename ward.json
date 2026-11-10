@@ -5,23 +5,23 @@
     "visited_by_bishopric": true,
     "members": [
         {
-            "first_name": "John",
+            "first_name": "John Jones",
             "gender": "Male",
             "birthdate": "1989-05-15"
         },
         {
-            "first_name": "Jane",
+            "first_name": "Jane Jones",
             "gender": "Female",
             "birthdate": "1990-08-22"
         },
         
         {
-            "first_name": "Emily",
+            "first_name": "Emily Jones",
             "gender": "Female",
             "birthdate": "2014-03-10"
         },
         {
-            "first_name": "Michael",
+            "first_name": "Michael Jones",
             "gender": "Male",
             "birthdate": "2016-11-05"
         }
